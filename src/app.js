@@ -15,21 +15,21 @@ app.set('views',viewsp)
 app.use(express.static(publicd))
 app.get('',(req,res)=>{
     res.render('index',{
-        title:'weather app',
+        title:'Weather',
         name:'Vishal Rochlani'
     })
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help',
-        help:'this is very helpfull',
+        help:'This is very helpfull... lol ',
         name:'wishcode'
     })
 })
 app.get('/about',(req,res)=>{
     res.render('about',{
         title:"About me",
-        name:'wishcode'
+        name:'Vishal Rochlani'
     })
 })
 app.get('/weather',(req,res)=>{
