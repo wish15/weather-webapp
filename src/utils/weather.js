@@ -11,7 +11,7 @@ const forcast=(long,lati,callback)=>{
             callback("unable to trace location",undefined)
         }
         else{
-            callback(undefined,response.body.daily.data[0].summary+" Its is currently "+response.body.currently.temperature+" degree out "+".There is "+response.body.currently.precipProbability+" % chances of rain"
+            callback(undefined,response.body.daily.data[0].summary+" It is currently "+response.body.currently.temperature+" degrees out "+".There is "+response.body.currently.precipProbability+" % chances of rain"
             )
         }
     })
