@@ -6,6 +6,9 @@ const express=require('express')
 //console.log(__dirname)
 //console.log(path.join(__dirname,'../public'))
 const app=express()
+
+const port=process.env.PORT || 3000
+
 const publicd=path.join(__dirname,'../public')
 const viewsp=path.join(__dirname,"../templates/views")
 const partialsPath=path.join(__dirname,'../templates/partials')
@@ -30,6 +33,7 @@ app.get('/about',(req,res)=>{
     res.render('about',{
         title:"About me",
         name:'Vishal Rochlani'
+
     })
 })
 app.get('/weather',(req,res)=>{
@@ -84,6 +88,6 @@ app.get("*",(req,res)=>{
         name:'wishcode'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server is up')  
+app.listen(port,()=>{
+    console.log('Server is up at port '+port)  
 })
